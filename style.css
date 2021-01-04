@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Staatliches&display=swap');
+
+*{
+    margin : 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 24, 29);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    animation: zoom_bg 20s forwards;
+}
+
+@keyframes zoom_bg{
+    0%{
+        transform: scale(1.5);
+        opacity: 0.03;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 0.4;
+    }
+}
+
+.banner {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+}
+
+.banner h1{
+    color: white;
+    font-size: 1rem;
+    font-family: "Audiowide";
+    text-shadow: .1rem .2rem 3px rgba( 0, 0, 0, 0.7);
+    line-height: 2rem;
+    opacity: 0;
+    animation: moveTitle 3s forwards;
+}
+
+@keyframes moveTitle{
+    0%{
+        transform: translateX(40rem);
+    }
+
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+.banner p{
+    color: rgb(245, 245, 245);
+    font-size: 0.8rem;
+    font-family: "Audiowide";
+    text-shadow: .1rem .2rem 3px rgba( 0, 0, 0, 0.7);
+    line-height: 2rem;
+    opacity: 0;
+    animation: moveName 3s 1s forwards;
+}
+
+@keyframes moveName{
+    0%{
+        transform: translateX(-40rem);
+    }
+
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+.banner button{
+    color: white;
+    background: #c0734d;
+    background: -webkit-linear-gradient(to right, #ff5e62, #c0734d);
+    background: linear-gradient(to right, #ff5e62, #c0734d);
+    font-family: "Staatliches";
+    border-radius: 0.2rem;
+    border: none;
+    text-align: center;
+    padding: .5rem 1rem;
+    transition: 2s;
+    opacity: 0;
+    animation: buttongrow 2s 2s forwards;
+}
+
+.banner button:hover {
+    background: #f7e4db;
+    background: -webkit-linear-gradient(to right, #f8d4d5, #f8e7df);
+    background: linear-gradient(to right, #f8dedf, #f5e5de);
+    color:#c0734d;
+    transition: 2s;
+    cursor:pointer;
+}
+
+@keyframes buttongrow{
+    0%{
+        transform: translateY(10rem);
+        size: -2rem;
+    }
+    100%{
+        transform: translateY(0rem);
+        size: 0rem;
+        opacity: 1;
+    }
+}
