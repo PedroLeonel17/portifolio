@@ -10,5 +10,7 @@ O controle das tarefas será realizado pelo git hub
 
 :package: nova funcionalidade
 :up: atualização
-:beatle:  correção de bug
-:checkered_flag: release
+:beetle:  correção de bug
+:unlock: release
+:books: melhorias nos códigos
+:pencil: atualização do README
