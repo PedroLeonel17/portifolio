@@ -13,4 +13,5 @@ O controle das tarefas será realizado pelo git hub
 :beetle:  correção de bug
 :unlock: release
 :books: melhorias nos códigos
+:camera: nova imagem de ilustração
 :pencil: atualização do README
