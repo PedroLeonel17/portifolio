@@ -1,17 +1,104 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Staatliches&display=swap');
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
 *{
     margin : 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
+
+:root{
+    --font-primary: "Audiowide",serif;
+    --font-secundary: "Staatliches",serif;
+}
+/* Menu */
+
+.hb-menu {
+    position: fixed;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hb-menu :hover{
+    cursor: pointer;
+}
+
+.line{
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.801);
+}
+
+.sidebar{
+    width: 10rem;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    right:0;
+}
+
+.menu {
+    position: absolute;
+    top: 22%;
+    left: 0;
+    right: 0;
+}
+
+.menu-item{
+    text-align: center;
+    margin: 0.6rem 0rem;
+}
+
+.menu-link{
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    color:rgb(29, 27, 25);
+}
+
+.menu-link:hover{
+    color: #ff5e62;
+    transition: .5s;
+}
+
+.social-media{
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.social-media a{
+    margin: 0 0.5rem;
+    color:  #ff5e62;
+    transition: .5s;
+}
+
+.social-media a:hover{
+    color: rgb(29, 27, 25);
+}
+
+
+
+/* Header */
 
 header{
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
-    font-size: 16px;
 }
 
 .img-wrapper{
@@ -49,9 +136,9 @@ header{
 }
 
 .banner h1{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
-    font-family: "Audiowide";
+    font-family: var(--font-primary);
     text-shadow: .1rem .2rem 3px rgba( 0, 0, 0, 0.7);
     line-height: 2rem;
     opacity: 0;
@@ -64,7 +151,7 @@ header{
     }
 
     100%{
-        transform: translateX(0rem);
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -72,7 +159,7 @@ header{
 .banner p{
     color: rgb(245, 245, 245);
     font-size: 0.8rem;
-    font-family: "Audiowide";
+    font-family: var(--font-primary);
     text-shadow: .1rem .2rem 3px rgba( 0, 0, 0, 0.7);
     line-height: 2rem;
     opacity: 0;
@@ -85,24 +172,25 @@ header{
     }
 
     100%{
-        transform: translateX(0rem);
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
 .banner button{
+    transform: translateY(10rem);
     color: white;
     background: #c0734d;
     background: -webkit-linear-gradient(to right, #ff5e62, #c0734d);
     background: linear-gradient(to right, #ff5e62, #c0734d);
-    font-family: "Staatliches";
+    font-family: var(--font-secundary);
+    font-weight: 400;
     border-radius: 0.2rem;
     border: none;
+    padding: .2rem 3rem;
     text-align: center;
-    padding: .5rem 1rem;
     transition: 2s;
-    opacity: 0;
-    animation: buttongrow 2s 2s forwards;
+    animation: buttonUp 2s 2s forwards;
 }
 
 .banner button:hover {
@@ -114,14 +202,11 @@ header{
     cursor:pointer;
 }
 
-@keyframes buttongrow{
+@keyframes buttonUp{
     0%{
         transform: translateY(10rem);
-        size: -2rem;
     }
     100%{
-        transform: translateY(0rem);
-        size: 0rem;
-        opacity: 1;
+        transform: translateY(0);
     }
 }
